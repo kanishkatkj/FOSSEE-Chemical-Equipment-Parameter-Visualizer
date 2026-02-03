@@ -8,11 +8,12 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (username && password) {
-            // For basic auth simulation
+        if (username === 'Admin' && password === 'Admin') {
             const auth = btoa(`${username}:${password}`);
             localStorage.setItem('auth', auth);
             navigate('/dashboard');
+        } else {
+            alert("Invalid credentials! Please use 'Admin' / 'Admin'");
         }
     };
 

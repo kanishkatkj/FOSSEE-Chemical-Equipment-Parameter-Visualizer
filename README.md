@@ -102,9 +102,7 @@ A professional hybrid Web and Desktop application for visualizing and analyzing 
 ---
 
 ## Login Credentials
-The application runs in **Demo Mode**. You can use any non-empty username/password to access the dashboard.
-
-**Recommended Credentials:**
+**Required Credentials (Case Sensitive):**
 - **Username:** `Admin`
 - **Password:** `Admin`
 

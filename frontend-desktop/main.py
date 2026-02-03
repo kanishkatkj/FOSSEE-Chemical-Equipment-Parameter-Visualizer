@@ -32,12 +32,10 @@ class LoginDialog(QDialog):
         self.setLayout(layout)
         
     def check_login(self):
-        # Basic auth simulation / checking against API if needed
-        # For now, simplistic check or valid credentials for the demo
-        if self.username.text() and self.password.text():
+        if self.username.text() == 'Admin' and self.password.text() == 'Admin':
             self.accept()
         else:
-            QMessageBox.warning(self, "Error", "Please enter username and password")
+            QMessageBox.warning(self, "Error", "Invalid credentials! Please use 'Admin' / 'Admin'")
 
 class MainWindow(QMainWindow):
     def __init__(self):

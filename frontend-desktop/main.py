@@ -102,7 +102,7 @@ class MainWindow(QMainWindow):
             lbl.setStyleSheet("""
                 QLabel {
                     background-color: #ffffff;
-                    border: 1px solid #e0e0e0;
+                    border: 1px solid #e2e8f0;
                     border-radius: 8px;
                     padding: 15px;
                     font-size: 16px;
@@ -213,7 +213,7 @@ class MainWindow(QMainWindow):
         ax2 = self.figure.add_subplot(122)
         params = ['Flowrate', 'Pressure', 'Temp']
         values = [data['averages']['flowrate'], data['averages']['pressure'], data['averages']['temperature']]
-        ax2.bar(params, values, color=['#333', '#666', '#999'])
+        ax2.bar(params, values, color=['#334155', '#64748b', '#94a3b8'])
         ax2.set_title('Average Parameters')
         
         self.canvas.draw()
@@ -228,8 +228,8 @@ if __name__ == "__main__":
     QWidget {
         font-family: 'Segoe UI', sans-serif;
         font-size: 14px;
-        color: #1a1a1a;
-        background-color: #f5f5f5;
+        color: #374151; /* Gray 700 */
+        background-color: #f8fafc; /* Slate 50 */
     }
     
     /* Main Window & Tabs */
@@ -238,77 +238,80 @@ if __name__ == "__main__":
     }
     
     QTabWidget::pane {
-        border: 1px solid #e0e0e0;
+        border: 1px solid #e2e8f0; /* Slate 200 */
         background: #ffffff;
-        border-radius: 4px;
+        border-radius: 6px;
     }
     
     QTabBar::tab {
-        background: #e0e0e0;
-        color: #555;
-        padding: 8px 16px;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        margin-right: 2px;
+        background: #f1f5f9; /* Slate 100 */
+        color: #64748b; /* Slate 500 */
+        padding: 10px 20px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-right: 4px;
+        font-weight: 500;
     }
     
     QTabBar::tab:selected {
         background: #ffffff;
-        color: #000;
-        border: 1px solid #e0e0e0;
-        border-bottom: 1px solid #ffffff;
+        color: #1e293b; /* Slate 800 */
+        border: 1px solid #e2e8f0;
+        border-bottom: 2px solid #ffffff; /* Seamless blend */
         font-weight: bold;
     }
     
     /* Buttons */
     QPushButton {
-        background-color: #000000;
+        background-color: #334155; /* Slate 700 - Lighter than black */
         color: #ffffff;
         border: none;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
     }
     
     QPushButton:hover {
-        background-color: #333333;
+        background-color: #475569; /* Slate 600 */
     }
     
     QPushButton:pressed {
-        background-color: #555555;
+        background-color: #1e293b; /* Slate 800 */
     }
     
     /* Tables */
     QTableWidget {
         background-color: #ffffff;
-        border: 1px solid #e0e0e0;
-        gridline-color: #f0f0f0;
-        selection-background-color: #f0f0f0;
-        selection-color: #000;
+        border: 1px solid #e2e8f0;
+        gridline-color: #f1f5f9;
+        selection-background-color: #f1f5f9;
+        selection-color: #0f172a; /* Slate 900 */
     }
     
     QHeaderView::section {
-        background-color: #f9f9f9;
-        padding: 6px;
+        background-color: #f8fafc;
+        padding: 8px;
         border: none;
-        border-bottom: 2px solid #e0e0e0;
-        font-weight: bold;
+        border-bottom: 2px solid #e2e8f0;
+        font-weight: 600;
+        color: #475569;
     }
     
     /* Labels & Cards substitute */
     QLabel {
-        color: #333;
+        color: #334155;
     }
     
     QLineEdit {
-        padding: 6px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        padding: 8px;
+        border: 1px solid #cbd5e1; /* Slate 300 */
+        border-radius: 6px;
         background-color: #fff;
+        color: #1e293b;
     }
     
     QLineEdit:focus {
-        border: 1px solid #000;
+        border: 2px solid #334155; /* Slate 700 */
     }
     """
     app.setStyleSheet(qss)

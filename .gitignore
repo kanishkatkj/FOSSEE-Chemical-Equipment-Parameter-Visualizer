@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project Specific
+backend/media/
+backend/venv/
+frontend-web/node_modules/
+frontend-desktop/__pycache__/
+*.csv

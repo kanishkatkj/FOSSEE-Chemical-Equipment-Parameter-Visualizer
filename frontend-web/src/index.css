@@ -1,0 +1,217 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #374151;
+  /* Gray 700 */
+  --text-color-heading: #111827;
+  /* Gray 900 */
+  --primary-color: #18181b;
+  /* Zinc 900 */
+  --secondary-color: #64748b;
+  /* Slate 500 */
+  --border-color: #e2e8f0;
+  /* Slate 200 */
+  --card-bg: #ffffff;
+  --hover-bg: #f8fafc;
+  /* Slate 50 */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8fafc;
+  /* Very subtle cool gray */
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-color-heading);
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover {
+  background-color: #27272a;
+  /* Slightly lighter zinc */
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.secondary {
+  background-color: #fff;
+  color: var(--text-color-heading);
+  border: 1px solid var(--border-color);
+}
+
+button.secondary:hover {
+  background-color: var(--hover-bg);
+  border-color: #cbd5e1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-md);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  margin: 0.5rem 0 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background-color: #fff;
+  color: var(--text-color-heading);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1);
+  /* Soft aura */
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--hover-bg);
+  color: var(--text-color-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+th:first-child {
+  border-top-left-radius: var(--radius);
+}
+
+th:last-child {
+  border-top-right-radius: var(--radius);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: var(--hover-bg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-left: 2rem;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+.navbar .brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-color-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

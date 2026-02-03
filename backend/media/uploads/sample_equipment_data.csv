@@ -1,0 +1,16 @@
+Equipment Name,Type,Flowrate,Pressure,Temperature
+Pump-A01,Centrifugal Pump,120.5,15.2,45.3
+Pump-A02,Centrifugal Pump,115.0,14.8,44.2
+Rec-101,Reactor,0.0,25.4,180.5
+Rec-102,Reactor,0.0,26.1,182.0
+Ex-201,Heat Exchanger,350.2,5.5,95.4
+Ex-202,Heat Exchanger,340.8,5.4,92.1
+Tank-B01,Storage Tank,0.0,1.2,25.0
+Tank-B02,Storage Tank,0.0,1.1,24.5
+Comp-C01,Compressor,500.5,120.5,60.2
+Pump-A03,Centrifugal Pump,122.1,15.5,45.8
+Mix-D01,Mixer,45.0,2.5,30.0
+Mix-D02,Mixer,46.2,2.6,31.2
+Rec-103,Reactor,0.0,24.8,178.9
+Ex-203,Heat Exchanger,355.0,5.6,96.0
+Valve-V01,Control Valve,120.0,15.0,45.0
